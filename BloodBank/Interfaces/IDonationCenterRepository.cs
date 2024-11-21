@@ -1,4 +1,5 @@
-﻿using BloodBank.Models;
+﻿using BloodBank.DTOs;
+using BloodBank.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,13 @@ namespace BloodBank.Interfaces
     public interface IDonationCenterRepository
     {
         Task<IEnumerable<DonationCenter>> GetAllAsync();
-        Task<DonationCenter> GetByIdAsync(string id, string area);
-        //Task AddAsync(DonationCenter center);
-        //Task UpdateAsync(string id, DonationCenter updatedCenter);
-        //Task DeleteAsync(string id);
+        Task<DonationCenter> GetByIdAsync(string id);
+        Task AddAsync(DonationCenter center);
+        Task UpdateAsync(string id, DonationCenterUpdateDto updateDto);
+        Task UpdateHoursAsync(string id, DonationCenterUpdateHoursDto updateHoursDto);
+        Task DeleteAsync(string id);
+
+       
     }
 
 }

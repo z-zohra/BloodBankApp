@@ -16,7 +16,7 @@ namespace BloodBank.DTOs
         public string AddressLine2 { get; set; }
         public string PostalCode { get; set; }
         public Dictionary<string, string> HoursOfOperation { get; set; }
-        public Dictionary<string, BloodTypeInfo> BloodTypes { get; set; }
+        public List<BloodTypeInfo> BloodTypes { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BloodBank.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,9 @@ namespace BloodBank.Models
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public string PostalCode { get; set; }
-        public Dictionary<string, BloodTypeInfo> BloodTypes { get; set; }
+        public List<BloodTypeInfo> BloodTypes { get; set; }
         public Dictionary<string, string> HoursOfOperation { get; set; }
+       // public List<BloodTypeCreateDto> BloodTypes { get; set; }
     }
 
    

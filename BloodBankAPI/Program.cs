@@ -24,6 +24,8 @@ namespace BloodBankAPI
 
             // Register your repository
             builder.Services.AddScoped<IDonationCenterRepository, DonationCenterRepository>();
+            builder.Services.AddScoped<IBloodTypeRepository, BloodTypeRepository>();
+
 
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

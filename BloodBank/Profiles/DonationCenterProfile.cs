@@ -16,6 +16,9 @@ namespace BloodBank.Profiles
         {
             CreateMap<DonationCenter, DonationCenterReadDto>();
             CreateMap<DonationCenterCreateDto, DonationCenter>();
+            CreateMap<DonationCenterUpdateDto, DonationCenter>();
+            CreateMap<BloodTypeCreateDto, BloodTypeInfo>();
+            CreateMap<BloodTypeUpdateDto, BloodTypeInfo>();
         }
     }
 

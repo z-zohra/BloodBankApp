@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 
 namespace BloodBank.DTOs
 {
-   class DonationCenterUpdateDto
+   public class DonationCenterUpdateDto
     {
-        public string Id { get; }
-        public string Area { get;}
-        //public string AddressLine1 { get; set; }
-        //public string AddressLine2 { get; set; }
-        //public string PostalCode { get; set; }
-
-        // Assuming this application will allow admins to only update the blood stock info and hours of operation in case there is a chnage because of some holiday 
+        public string Id { get; set; }
+        public string Area { get; set; }
+        public string AddressLine1 { get; set; }
+        public string AddressLine2 { get; set; }
+        public string PostalCode { get; set; } 
         public Dictionary<string, string> HoursOfOperation { get; set; }
-        public Dictionary<string, BloodTypeInfo> BloodTypes { get; set; }
+        public List<BloodTypeUpdateDto> BloodTypes { get; set; }
+
     }
 }
