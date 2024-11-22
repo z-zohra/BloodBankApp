@@ -13,6 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["BloodBankAPI/BloodBankAPI.csproj", "BloodBankAPI/"]
+COPY ["BloodBank/BloodBank.csproj", "BloodBank/"]
 RUN dotnet restore "./BloodBankAPI/BloodBankAPI.csproj"
 COPY . .
 WORKDIR "/src/BloodBankAPI"
